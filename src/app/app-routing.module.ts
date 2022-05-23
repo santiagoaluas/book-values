@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'escena',
+    loadChildren: () => import('./escena/escena.module').then( m => m.EscenaPageModule)
+  },
 ];
 
 @NgModule({
