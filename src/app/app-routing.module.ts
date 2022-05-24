@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/slider/slider.module').then( m => m.SliderPageModule)
   },
   {
     path: '',
@@ -15,6 +15,11 @@ const routes: Routes = [
     path: 'escena',
     loadChildren: () => import('./escena/escena.module').then( m => m.EscenaPageModule)
   },
+  {
+    path: 'slider',
+    loadChildren: () => import('./pages/slider/slider.module').then( m => m.SliderPageModule)
+  },
+
 ];
 
 @NgModule({

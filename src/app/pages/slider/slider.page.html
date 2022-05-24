@@ -1,0 +1,20 @@
+<ion-content>
+  <h1 class="tittle">BOOK VALUES</h1>
+  <ion-slides pager="true" [options]="slideOptis" >
+    <ion-slide *ngFor="let slide of sliders; let i = index">
+      <ion-card mode="md">
+        <ion-card-header>
+          <img class="img-slider" [src]="slide.imageUrl"/>
+          <ion-card-subtitle style="color:black"></ion-card-subtitle>
+          <ion-card-title style="color:black; font-weight: bold;">{{slide.title}}</ion-card-title>
+        </ion-card-header>
+       <ion-card-content style="color:black; font-size: 18px">
+          {{slide.description}}
+          <div *ngIf="i === 2">
+            <ion-button slot="end" routerLink="/escena" color="success">EMPEZAR <ion-icon name="arrow-forward-outline"></ion-icon></ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
